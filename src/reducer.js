@@ -12,6 +12,7 @@ const reducer = (state, action) => {
       console.log(state.basket);
       let array = Object.assign({}, state);
       array.basket = [...array.basket, action.item];
+      localStorage.setItem("Cart-Details", JSON.stringify(array));
       return array;
     //  { ...state, basket: [...state.basket, action.item] };
     case "REMOVE_FROM_BASKET":

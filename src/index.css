@@ -1,75 +1,98 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{margin:0;
-padding: 0;
-box-sizing:border-box;
-text-decoration: none;
-font-family: 'Poppins', sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  .list {
+    @apply mt-4 flex gap-3 cursor-pointer;
+  }
+  .list:hover {
+    color: #c67c1c;
+  }
 }
-body{
-  background-color: rgb(234,237,237);
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
 }
-.header{
+body {
+  background-color: rgb(234, 237, 237);
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.header {
   background-color: #131921;
   display: flex;
   align-items: center;
   position: sticky;
-  top:0;
+  top: 0;
   z-index: 100;
 }
 
-.header__logo{
+.header__logo {
   width: 100px;
-object-fit: contain;
-margin: 0 20px;
-margin-top: 18px;
+  object-fit: contain;
+  margin: 0 20px;
+  margin-top: 18px;
 }
-.header__search{
-  display:flex;
+.header__search {
+  display: flex;
   flex: 1;
 }
-.header__searchInput{
+.header__searchInput {
   height: 12px;
-  padding:20px;
-  border:none;
+  padding: 20px;
+  border: none;
   width: 100%;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-.header__searchIcon{
+.header__searchIcon {
   padding: 5px;
- height: 40px !important;
- width: 40px !important;
+  height: 40px !important;
+  width: 40px !important;
   background-color: #cd9042;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-.header__Nav{
+.header__Nav {
   display: flex;
   justify-content: space-evenly;
 }
-.header__link{
+.header__link {
   color: aliceblue;
   text-decoration: none;
 }
-.header__option{
+.header__option {
   display: flex;
   flex-direction: column;
   margin-left: 10px;
   margin-right: 10px;
 }
-.header__optionLineOne{
+.header__optionLineOne {
   font-size: 10px;
 }
-.header__optionLineTwo{
+.header__optionLineTwo {
   font-size: 13px;
   font-weight: 800;
 }
-.header__basket{
+.header__basket {
   display: flex;
   align-items: center;
   margin: 8px;
 }
-.header__basketCount{
- margin-left: 10px;
- margin-right: 10px;
+.header__basketCount {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.outer_boder {
+  box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.15);
 }
